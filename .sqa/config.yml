@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/ai4os-hub/demo-advanced:
+      branch: main
+      repo: https://github.com/ai4os-hub/demo-advanced
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ai4os-hub/demo-advanced git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-aqua-serval.sh
+        container: qc.acc_skimpy-cobalt-crane
+  QC.Doc:
+    repos:
+      github.com/ai4os-hub/demo-advanced find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-gold-moorhen.sh
+        container: qc.doc_thirsty-xanthic-indri
+      github.com/ai4os-hub/demo-advanced git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-scarlet-jaguar.sh
+        container: qc.doc_trippy-viridian-fish
+  QC.Lic:
+    repos:
+      github.com/ai4os-hub/demo-advanced licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-magnolia-budgerigar.sh
+        container: qc.lic_homey-pumpkin-booby
+  QC.Ver:
+    repos:
+      github.com/ai4os-hub/demo-advanced get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-heliotrope-tang.sh
+        container: qc.ver_breezy-charcoal-toucan
+timeout: 5400
