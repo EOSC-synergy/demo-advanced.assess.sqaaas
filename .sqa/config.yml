@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/ai4os-hub/demo-advanced git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-aqua-serval.sh
-        container: qc.acc_skimpy-cobalt-crane
+        - /usr/bin/env sh .sqa/script.gimpy-cornflower-chihuahua.sh
+        container: qc.acc_pasty-salmon-seahorse
   QC.Doc:
     repos:
       github.com/ai4os-hub/demo-advanced find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-gold-moorhen.sh
-        container: qc.doc_thirsty-xanthic-indri
+        - /usr/bin/env sh .sqa/script.pasty-brown-stoat.sh
+        container: qc.doc_snappy-seashell-duck
       github.com/ai4os-hub/demo-advanced git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-scarlet-jaguar.sh
-        container: qc.doc_trippy-viridian-fish
+        - /usr/bin/env sh .sqa/script.snappy-denim-olm.sh
+        container: qc.doc_flabby-orchid-fox
   QC.Lic:
     repos:
       github.com/ai4os-hub/demo-advanced licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-magnolia-budgerigar.sh
-        container: qc.lic_homey-pumpkin-booby
+        - /usr/bin/env sh .sqa/script.shaky-ecru-booby.sh
+        container: qc.lic_scummy-wheat-mongrel
   QC.Ver:
     repos:
       github.com/ai4os-hub/demo-advanced get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-heliotrope-tang.sh
-        container: qc.ver_breezy-charcoal-toucan
+        - /usr/bin/env sh .sqa/script.snoopy-tan-squirrel.sh
+        container: qc.ver_tacky-russet-goat
 timeout: 5400
